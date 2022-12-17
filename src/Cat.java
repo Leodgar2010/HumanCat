@@ -1,12 +1,5 @@
-public class Cat {
-    String name;
-    int age;
-    int weight;
-    Boolean sleep;
-    Boolean hungry;
+public class Cat extends Animal implements Pet {
     Boolean wishToHug;
-
-    Cat (){}
 
     public String getName() {
         return name;
@@ -16,38 +9,6 @@ public class Cat {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public Boolean getSleep() {
-        return sleep;
-    }
-
-    public void setSleep(Boolean sleep) {
-        this.sleep = sleep;
-    }
-
-    public Boolean getHungry() {
-        return hungry;
-    }
-
-    public void setHungry(Boolean hungry) {
-        this.hungry = hungry;
-    }
-
     public Boolean getWishToHug() {
         return wishToHug;
     }
@@ -55,4 +16,20 @@ public class Cat {
     public void setWishToHug(Boolean wishToHug) {
         this.wishToHug = wishToHug;
     }
+
+    @Override
+    public void feed() {
+        System.out.println(name + " кушает");
+    }
+
+    @Override
+    public void play() {
+        System.out.println(name + " играет");
+    }
+
 }
+
+
+
+
+
