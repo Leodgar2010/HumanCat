@@ -1,4 +1,10 @@
-public abstract class  Animal {
+import java.util.ArrayList;
+import java.util.Set;
+
+public abstract class Animal {
+    public Animal() {
+    }
+
     public String getName() {
         return name;
     }
@@ -8,10 +14,17 @@ public abstract class  Animal {
     }
 
     String name;
+    String kind;
     int age;
     int weight;
     Boolean sleep;
     Boolean hungry;
+
+    public Animal(String kind, int age, int weight) {
+        this.kind = kind;
+        this.age = age;
+        this.weight = weight;
+    }
 
     public int getAge() {
         return age;
@@ -29,20 +42,23 @@ public abstract class  Animal {
         this.weight = weight;
     }
 
-    public Boolean getSleep() {
+    private Boolean getSleep() {
         return sleep;
     }
 
-    public void setSleep(Boolean sleep) {
+    private void setSleep(Boolean sleep) {
         this.sleep = sleep;
     }
 
-    public Boolean getHungry() {
+    private Boolean getHungry() {
         return hungry;
     }
 
-    public void setHungry(Boolean hungry) {
+    private void setHungry(Boolean hungry) {
         this.hungry = hungry;
     }
+
+    public abstract ArrayList<Animal> createGroup(int size);
+    public abstract Set <Animal> showUniqHash (ArrayList<Animal> a);
 }
 
