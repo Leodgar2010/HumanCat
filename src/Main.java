@@ -1,5 +1,10 @@
+import java.util.ArrayList;
+
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
+        /*
         Human human  = new Human();
         human.setAtHome(true);
         human.setWishToHug(true);
@@ -18,7 +23,10 @@ public class Main {
         wolf.setName("Вован");
         wolf.hide();
         wolf.bite();
-
-
+                 */
+        Cat cat = new Cat();
+        ArrayList <Animal> group = cat.createGroup(20);
+        Set<Animal> uniq = cat.showUniqHash(group);
+        System.out.println(cat.showUniqCat(uniq));
+        }
     }
-}
